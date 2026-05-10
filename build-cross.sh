@@ -44,5 +44,8 @@ make all-target-libgcc
 make install-gcc
 make install-target-libgcc
 
+echo 'export PATH="$PATH:/opt/cross/bin"' >> ~/.bashrc
+source ~/.bashrc
+
 i686-elf-gcc --version
 i686-elf-ld --version
