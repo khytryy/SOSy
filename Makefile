@@ -15,7 +15,7 @@ ASM_OBJS   	:= $(patsubst src/%.asm, obj/%.o, $(ASM_SRC))
 OBJS		:= $(C_OBJS) $(ASM_OBJS)
 DEPS    	:= $(C_OBJS:.o=.d)
 
-C_FLAGS		:= -ffreestanding -O2 -Wall -Wextra -MMD -MP -Iinclude
+C_FLAGS		:= -ffreestanding -O2 -Wall -Wextra -MMD -MP -Iinclude -g
 LD_FLAGS	:= -ffreestanding -lgcc -nostdlib
 
 ASM_FLAGS   := -felf32
