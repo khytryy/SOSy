@@ -24,22 +24,19 @@ all: $(TARGET) iso
 
 # Link object files
 $(TARGET): $(OBJS)
-	@echo "		LD	$@"
+	@echo "  LD      $@"
 	@$(CC) $(LD_FLAGS) -T linker.ld -o $@ $^
 
 # Compile C code
 obj/%.o: src/%.c
 	@mkdir -p $(dir $@)
-	@echo "     CC 	$<"
-
+	@echo "  CC      $<"
 	@$(CC) $(C_FLAGS) -c $< -o $@
 
 # Assembly asm code
 obj/%.o: src/%.asm
 	@mkdir -p $(dir $@)
-
-	@echo "		ASM	$<"
-
+	@echo "  ASM     $<"
 	@$(ASM) $(ASM_FLAGS) $< -o $@
 
 -include $(DEPS)

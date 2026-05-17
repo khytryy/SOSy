@@ -7,7 +7,7 @@ void gdt_load(gdtr_t* gdtr);
 
 void gdt_init() {
     gdtr.size   = (sizeof(gdt_segment_t) * 5) - 1;
-    gdtr.offset = (unsigned int)gdt_entries;
+    gdtr.offset = (uint32_t)gdt_entries;
 
     gdt_set_entry(0, 0, 0, 0, 0);                   // Null descriptor
 

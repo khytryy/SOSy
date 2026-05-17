@@ -18,7 +18,7 @@ typedef struct {
 
 typedef struct {
     uint16_t        size;
-    unsigned int    offset;
+    uint32_t        offset;
 } __attribute__((packed)) gdtr_t;
 
 extern void             gdt_load(gdtr_t* gdtr);
