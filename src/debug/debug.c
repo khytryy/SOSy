@@ -43,7 +43,7 @@ char* itoa(int num, char* buffer, int base) {
 
     while (num != 0) {
         int rem = num % base;
-        buffer[i++] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
+        buffer[i++] = (rem > 9) ? (rem - 10) + 'A' : rem + '0';
         num = num / base;
     }
 
